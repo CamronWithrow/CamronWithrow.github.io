@@ -97,6 +97,7 @@ body {
 }
 
 .mutable-card {
+    overflow-y: auto;
     color: var(--color-eggshell);
     background-color: var(--color-feldgrau);
     border-radius: 15px;
