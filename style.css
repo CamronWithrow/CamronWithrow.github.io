@@ -152,3 +152,7 @@ body {
 #email:hover {
     cursor: pointer;
 }
+
+.sidebar nav li:hover {
+    cursor: pointer;
+}
