@@ -22,10 +22,38 @@ function swapContent(filename) {
 }
 
 const menu = document.querySelector(".menu");
-
 const homeIcon = menu.querySelector("#home");
-homeIcon.addEventListener("click", () => swapContent("home"));
 const projectIcon = menu.querySelector("#projects");
-projectIcon.addEventListener("click", () => swapContent("projects"));
 const cvIcon = menu.querySelector("#resume");
-cvIcon.addEventListener("click", () => swapContent("resume"));
+
+var iconList = [homeIcon, projectIcon, cvIcon];
+var current = 0;
+
+homeIcon.addEventListener("click", () => {
+    swapContent("home");
+    current = 0;
+});
+projectIcon.addEventListener("click", () => {
+    swapContent("projects");
+    current = 1;
+});
+cvIcon.addEventListener("click", () => {
+    swapContent("resume");
+    current = 2;
+});
+
+const turnPage = document.querySelector(".turn-page");
+const forward = turnPage.querySelector("#forward");
+const back = turnPage.querySelector("#back");
+
+forward.addEventListener("click", () => {
+    var next = (current + 1) % 3;
+    iconList[next].click();
+})
+back.addEventListener("click", () => {
+    var next = (current - 1) % 3;
+    if (next === -1) {
+        next = 2;
+    }
+    iconList[next].click();
+})
