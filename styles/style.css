@@ -19,6 +19,7 @@
 
 body {
     min-height: 100vh;
+    max-height: 100vh;
     padding: 10vh 0;
     background-color: var(--color-verdigris);
 
@@ -97,16 +98,17 @@ body {
 }
 
 .mutable-card {
+    padding: 2em;
     overflow-y: auto;
     color: var(--color-eggshell);
     background-color: var(--color-feldgrau);
     border-radius: 15px;
-    text-align: center;
+    /* text-align: center; */
     flex: 1;
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .icon-list {
