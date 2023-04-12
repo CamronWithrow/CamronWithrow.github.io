@@ -4,6 +4,10 @@ function updateViewport(mainNode, defaultStyle) {
     var main = viewport.querySelector("main");
     viewport.removeChild(main);
     viewport.appendChild(mainNode);
+    viewport.animate([
+        { transform: "translateX(100vh)" },
+        { transform: "translateX(0px)" },
+    ], 400);
     if (defaultStyle) {
         viewport.classList.add("default-card");
     } else {

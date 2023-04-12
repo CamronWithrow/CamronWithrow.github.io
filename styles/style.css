@@ -98,6 +98,8 @@ body {
 }
 
 .mutable-card {
+    position: relative;
+    z-index: 1;
     padding: 2em;
     overflow-y: auto;
     color: var(--color-eggshell);
@@ -126,6 +128,8 @@ body {
 }
 
 .sidebar > nav {
+    position: relative;
+    z-index: 2;
     width: 40px;
     padding: 1em 0;
     border: 1px solid var(--color-oxford-blue);
