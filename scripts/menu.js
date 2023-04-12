@@ -1,12 +1,17 @@
 const viewport = document.querySelector(".mutable-card");
 
-function updateViewport(mainNode) {
+function updateViewport(mainNode, defaultStyle) {
     var main = viewport.querySelector("main");
     viewport.removeChild(main);
     viewport.appendChild(mainNode);
+    if (defaultStyle) {
+        viewport.classList.add("default-card");
+    } else {
+        viewport.classList.remove("default-card");
+    }
 }
 
-function swapContent(filename) {
+function swapContent(filename, defaultStyle) {
     const url = `/pages/${filename}.html`;
     fetch(url)
     .then((response) => response.text())
@@ -14,7 +19,7 @@ function swapContent(filename) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
         const main = doc.querySelector("main");
-        updateViewport(main);
+        updateViewport(main, defaultStyle);
     })
     .catch((error) => {
         console.warn('There was an error.', error)
@@ -30,15 +35,15 @@ var iconList = [homeIcon, projectIcon, cvIcon];
 var current = 0;
 
 homeIcon.addEventListener("click", () => {
-    swapContent("home");
+    swapContent("home", true);
     current = 0;
 });
 projectIcon.addEventListener("click", () => {
-    swapContent("projects");
+    swapContent("projects", true);
     current = 1;
 });
 cvIcon.addEventListener("click", () => {
-    swapContent("resume");
+    swapContent("resume", false);
     current = 2;
 });
 

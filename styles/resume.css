@@ -1,0 +1,49 @@
+.resume li {
+    list-style: none;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.resume .mission-statement {
+    padding: 1em;
+}
+
+.resume section ul {
+    padding-left: 1em;
+}
+
+.resume section ul > li {
+    list-style: disc;
+}
+
+.resume section ol > li {
+    padding-bottom: 1em;
+}
+
+.resume h2, 
+.resume h3 {
+    padding-bottom: 0.5em;
+}
+
+.resume .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 35%;
+}
+
+.resume .contact-info {
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 34%;
+}
+
+.resume .contact-info em {
+    font-style: normal;
+    font-weight: bold;
+}
