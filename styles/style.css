@@ -17,6 +17,7 @@
 
 /* Semantic Tags */
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -62,9 +63,36 @@ footer {
     font-size: small;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    padding: 0.5rem;
+    border: 2px solid var(--color-oxford-blue);
+    border-radius: 10px;
+    background-color: var(--color-eggshell);
+}
+
+nav>hr {
+    color: var(--color-oxford-blue);
+    width: 80%;
+}
+
+nav>ol {
+    margin-top: 0.5rem;
+}
+
+nav>ol>li {
+    list-style: none;
+}
+
 
 /* Utility classes */
 .row-list {
+    margin: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
