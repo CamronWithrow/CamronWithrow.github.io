@@ -17,15 +17,16 @@
 
 /* Semantic Tags */
 body {
+    color: var(--color-oxford-blue);
     background-color: var(--color-verdigris);
-    font-family: 'Roboto', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
 
 header {
+    position: relative;
     padding: 1rem;
     margin: 1rem 2rem;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: var(--color-eggshell);
     text-align: center;
 }
@@ -44,6 +45,21 @@ button:hover {
     cursor: pointer;
 }
 
+main {
+    margin: 0rem 1rem;
+    border-radius: 5px;
+    background-color: var(--color-feldgrau);
+    text-align: center;
+    color: var(--color-eggshell);
+    padding: 1rem 0;
+}
+
+footer {
+    font-size: small;
+}
+
+
+/* Utility classes */
 .row-list {
     display: flex;
     flex-direction: row;
@@ -52,4 +68,10 @@ button:hover {
 
 .row-list>li {
     list-style: none;
+}
+
+.menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
