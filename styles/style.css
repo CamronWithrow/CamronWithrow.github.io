@@ -7,17 +7,19 @@
 
 :root {
     /* Color palette */
-    --color-eggshell:       #FAF3DD;
-    --color-oxford-blue:    #0A2342;
-    --color-feldgrau:       #5B6C5D;
-    --color-verdigris:      #5CA4A9;
-    --color-cocoa-brown:    #D16014;
+    --color-eggshell: #FAF3DD;
+    --color-oxford-blue: #0A2342;
+    --color-feldgrau: #5B6C5D;
+    --color-verdigris: #5CA4A9;
+    --color-cocoa-brown: #D16014;
 }
 
 
 /* Semantic Tags */
 body {
     background-color: var(--color-verdigris);
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 header {
@@ -32,7 +34,7 @@ button {
     background-color: var(--color-cocoa-brown);
     border: 2px solid var(--color-oxford-blue);
     border-radius: 20px;
-    padding: 0 1em;
+    padding: 0.35rem 1rem;
     color: var(--color-oxford-blue);
 }
 
@@ -42,20 +44,12 @@ button:hover {
     cursor: pointer;
 }
 
-
-/* Utility Classes */
 .row-list {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-}
-
-.row-list > li {
-    list-style: none;
-}
-
-.even-cols {
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
+}
+
+.row-list>li {
+    list-style: none;
 }
